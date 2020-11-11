@@ -115,7 +115,7 @@ p {
 .button {
   position: absolute;
   display: block;
-  padding: 20px 50px;
+  padding: 20px 40px;
   left: 100px;
   bottom: 100px;
   background: #FF7E7E;
