@@ -19,7 +19,7 @@ function main() {
   camera.position.set(0, 10, 20);
 
   const controls = new OrbitControls(camera, canvas);
-  controls.target.set(0, 5, 0);
+  controls.autoRotate = true;
   controls.update();
 
   const scene = new THREE.Scene();
@@ -134,7 +134,7 @@ function main() {
       camera.aspect = canvas.clientWidth / canvas.clientHeight;
       camera.updateProjectionMatrix();
     }
-
+    controls.update();
     renderer.render(scene, camera);
 
     requestAnimationFrame(render);
