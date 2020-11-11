@@ -139,8 +139,9 @@ html, body {
   height: 100vh;
   display: block;
   position: fixed;
+
     left: 0;
     top: 0;
-    z-index: 2;
+z-index: -1;
     pointer-events: none;
 }
