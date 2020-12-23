@@ -1,0 +1,177 @@
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+}
+
+.item p {
+  transition: all 0.7s cubic-bezier(.55, 0, .45, 1);
+  display: block;
+  line-height: 1.2rem;
+  height: 0px;
+  margin: 0px;
+  opacity: 0;
+}
+
+.item {
+  display: block;
+  flex-basis: auto;
+  flex-grow: 1;
+  flex-basis: auto;
+  font-size: 2rem;
+  background-size: cover;
+  background-position: top center;
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 0 5px rgba(100,255,100,0.8);
+  filter: saturate(0);
+  color: rgba(100,255,100,0.5);
+  transition: filter 0.7s cubic-bezier(.55, 0, .45, 1), flex-grow 0.7s cubic-bezier(.55, 0, .45, 1);
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  display: absolute;
+  display: block;
+  white-space: pre;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  opacity: 0;
+}
+
+.container .item:hover p {
+  transition: all 0.7s cubic-bezier(.55, 0, .45, 1);
+  display: block;
+  line-height: 1.6rem;
+  height: 90px;
+  margin: 1px;
+  opacity: 1;
+}
+
+.description {
+  background-color: #222;
+}
+
+.item h1 {
+  padding: 0;
+  margin: 0;
+  line-height: 1rem;
+}
+
+.container:hover .item {
+  flex-grow: 0.05;
+}
+
+.container .item:hover {
+  filter: saturate(1);
+  flex-grow: 5;
+}
+
+.container:hover .item span {
+  padding-top: 0.3rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.container .item:hover span {
+  padding-top: 15vh;
+  font-size: 3rem;
+  line-height: 6rem;
+}
+
+.container .item.description:hover span {
+  font-size: 2.2rem;
+  padding-top: 5vh;
+}
+
+.item:hover span {
+  transition: all 0.7s cubic-bezier(.55, 0, .45, 1);
+  padding-top: 15vh;
+}
+
+span {
+  transition: font-size 0.7s cubic-bezier(.55, 0, .45, 1), padding-top 0.7s cubic-bezier(.55, 0, .45, 1), line-height 0.7s cubic-bezier(.55, 0, .45, 1);
+  display: block;
+  padding-top: 3.5vh;
+  font-size: 2rem;
+  line-height: 1.7rem;
+}
+
+.uko {
+  background-image: url("../img/uko.png");
+}
+
+.norman {
+  background-image: url("../img/norman.png");
+}
+
+.emilia {
+  background-image: url("../img/emilia.png");
+}
+
+.tarmo {
+  background-image: url("../img/tarmo.png");
+}
+
+.edvin {
+  background-image: url("../img/edvin.png");
+}
+
+.maria {
+  background-image: url("../img/maria.png");
+}
+
+.laura {
+  background-image: url("../img/laura.png");
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: white;
+  opacity: 1;
+  z-index: 10;
+  animation: loader 0.7s cubic-bezier(.55, 0, .45, 1) 0.6s 1 forwards;
+}
+
+@keyframes loader {
+  0% {
+    z-index: 2;
+    opacity: 1;
+  }
+  99% {
+    z-index: 2;
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
+}
